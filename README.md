@@ -14,7 +14,6 @@ Sistem ini diorkestrasi oleh `MiningOperationManager`, yang mengikuti langkah-la
    * **Logistics Agent**: Menganalisis jadwal kapal dan data logistik.
 3. **Optimasi**: Insight dari agen spesialis dikirim ke **Optimizer Agent**, yang menyintesis informasi, menghasilkan rekomendasi, dan membuat draft rencana operasional mingguan.
 
-
 Diagram alur kerjanya:
 
 ```mermaid
