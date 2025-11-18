@@ -17,20 +17,7 @@ Sistem ini diorkestrasi oleh `MiningOperationManager`, yang mengikuti langkah-la
 Diagram alur kerjanya:
 
 ```mermaid
-graph TD
-    A[Mulai] --> B{Memuat Data};
-    B --> C{Jalankan Agen Spesialis};
-    subgraph Analisis Bersamaan
-        C --> D[Agen Lingkungan];
-        C --> E[Agen Peralatan];
-        C --> F[Agen Logistik];
-    end
-    D --> G{Sintesis Insight};
-    E --> G;
-    F --> G;
-    G --> H[Agen Optimizer];
-    H --> I[Hasilkan Rekomendasi];
-    I --> J[Selesai];
+graph TD A[Start] --> B{Load Data}; B --> C{Run Specialist Agents}; subgraph Concurrent Analysis C --> D[Environment Agent]; C --> E[Equipment Agent]; C --> F[Logistics Agent]; end D --> G{Synthesize Insights}; E --> G; F --> G; G --> H[Optimizer Agent]; H --> I[Generate Recommendations]; I --> J[End];
 ```
 
 ##  Folder Structye
@@ -125,7 +112,7 @@ Proyek ini menggunakan `uv` untuk manajemen lingkungan dan paket.
    MODEL_NAME = os.getenv("OPENAI_MODEL_NAME")
    ```
 
-## ▶️ Cara Menjalankan Proyek
+## ▶ Cara Menjalankan Proyek
 
 ### Menggunakan Python Langsung
 
