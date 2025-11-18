@@ -17,7 +17,20 @@ Sistem ini diorkestrasi oleh `MiningOperationManager`, yang mengikuti langkah-la
 Diagram alur kerjanya:
 
 ```mermaid
-graph TD A[Start] --> B{Load Data}; B --> C{Run Specialist Agents}; subgraph Concurrent Analysis C --> D[Environment Agent]; C --> E[Equipment Agent]; C --> F[Logistics Agent]; end D --> G{Synthesize Insights}; E --> G; F --> G; G --> H[Optimizer Agent]; H --> I[Generate Recommendations]; I --> J[End];
+graph TD
+    A[Start] --> B{Load Data}
+    B --> C{Run Specialist Agents}
+    subgraph Concurrent Analysis
+        C --> D[Environment Agent]
+        C --> E[Equipment Agent]
+        C --> F[Logistics Agent]
+    end
+    D --> G{Synthesize Insights}
+    E --> G
+    F --> G
+    G --> H[Optimizer Agent]
+    H --> I[Generate Recommendations]
+    I --> J[End]
 ```
 
 ##  Folder Structye
